@@ -1,0 +1,16 @@
+Calling JRuby From Java
+
+Here's a toy example of how to implement a Java interface method in JRuby and then call it from Java.
+
+Compile it:
+javac JavaInterfaceExample.java
+jrubyc --javac -cp . JrubyAdderImpl.rb
+javac -cp /usr/local/jruby/lib/jruby.jar:. JavaCallerApp.java
+
+Run the Java caller app:
+java -cp /usr/local/jruby/lib/jruby.jar:. JavaCallerApp
+
+--
+@tommychheng
+http://tommy.chheng.com
+Interested in computer science grad school? Find top computer science grad schools based on their research using http://gradschoolnow.com
